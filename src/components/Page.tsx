@@ -11,7 +11,7 @@ const Wrapper = styled.div`
   width: 100%;
 `;
 type PageProps = {
-  metadata: {
+  metadata?: {
     title: string;
     description: string;
   };

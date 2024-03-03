@@ -6,7 +6,7 @@ const Wrapper = styled.div`
   border: thick solid red;
 `;
 export const ErrorView = (props) => {
-  const error = useErrorStore((state) => state.error);
+  const error = useErrorStore((state: any) => state.error) as any;
   return (
     <Page>
       <Wrapper>{props.children}</Wrapper>
