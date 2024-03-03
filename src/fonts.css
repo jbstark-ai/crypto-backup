@@ -1,0 +1,10 @@
+@font-face {
+    font-family: 'Cred';
+    src: local('Cred');
+    src: url('./fonts/cred/Cred-Regular.otf');
+  }
+  @font-face {
+    font-family: 'Monos';
+    src: local('Monos');
+    src: url('./fonts/monos/Monos-Regular.otf');
+  }
