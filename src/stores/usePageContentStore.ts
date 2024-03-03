@@ -1,6 +1,12 @@
 import { create } from "zustand";
 
-export const usePageContentStore = create((set) => ({
+interface PageContentStore {
+  content: any;
+  fetch: (args?: any, options?: any) => Promise<any>;
+  clear: () => any;
+}
+
+export const usePageContentStore = create<PageContentStore>((set) => ({
   content: {},
   fetch: async (url, options = {}) => {
     const response = await fetch(url);

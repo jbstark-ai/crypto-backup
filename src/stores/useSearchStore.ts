@@ -1,6 +1,13 @@
 import { create } from "zustand";
 
-export const useSearchStore = create((set) => ({
+interface SearchStore {
+  currentSearch: string;
+  results: any[];
+  fetch: (args?: any, options?: any) => Promise<any>;
+  clear: () => any;
+}
+
+export const useSearchStore = create<SearchStore>((set) => ({
   currentSearch: "",
   results: [],
   fetch: async (url, options = {}) => {

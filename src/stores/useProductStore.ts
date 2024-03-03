@@ -1,6 +1,12 @@
 import { create } from "zustand";
 
-export const useProductStore = create((set) => ({
+interface ProductStore {
+  products: any[];
+  fetch: (args?: any, options?: any) => Promise<any>;
+  clear: () => any;
+}
+
+export const useProductStore = create<ProductStore>((set) => ({
   products: [],
   fetch: async (url, options = {}) => {
     const response = await fetch(url);
