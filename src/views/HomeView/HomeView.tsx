@@ -170,11 +170,12 @@ const VideoUnit = ({ video, title, text }) => {
             ratio={{ sm: 12 / 9, lg: 16 / 9 }}
             transform={"translateY(-10%)"}
           >
-            <iframe
+            <img src={video} alt={title} />
+            {/* <iframe
               src={video}
               title={title}
               allow="accelerometer; loop; autoplay; encrypted-media; gyroscope;"
-            ></iframe>
+            ></iframe> */}
             {/* <video
               title="naruto"
               src={video}

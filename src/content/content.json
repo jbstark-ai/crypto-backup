@@ -57,7 +57,8 @@
                 "data": [
                     {
                         "id": 1,
-                        "video": "https://www.youtube-nocookie.com/embed/dEk_4wbVhJ4?si=t4hv2hXeASkEZsq9&autoplay=1&controls=0&mute=1&loop=1&rel=0&showinfo=0",
+                        "video": "https://image.api.playstation.com/vulcan/img/rnd/202009/2822/mYMuwpPA3kPgWoCWzvaVytSI.png",
+                        "videoOld": "https://www.youtube-nocookie.com/embed/dEk_4wbVhJ4?si=t4hv2hXeASkEZsq9&autoplay=1&controls=0&mute=1&loop=1&rel=0&showinfo=0",
                         "title": "Fresh games incoming",
                         "text": "Gem Sword Games is a new indie game developer for all platforms. \nWe are a fully remote studio.",
                         "link": "#"
