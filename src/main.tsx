@@ -13,7 +13,7 @@ const root = ReactDOM.createRoot(document.getElementById("root")!);
 const theme = extendTheme({
   fonts: {
     heading: `'Genniro', Arial, Helvetica, sans-serif`,
-    body: `Arial, Helvetica, sans-serif`,
+    body: `'Open Sans', Arial, Helvetica, sans-serif`,
   },
 });
 
