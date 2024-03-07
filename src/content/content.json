@@ -104,26 +104,8 @@
                 "data": [
                     {
                         "id": 1,
-                        "title": "ASome news 1",
-                        "text": "BLatest info goes here.",
-                        "link": ""
-                    },
-                    {
-                        "id": 2,
-                        "title": "ASome news 1",
-                        "text": "BLatest info goes here.",
-                        "link": ""
-                    },
-                    {
-                        "id": 3,
-                        "title": "ASome news 1",
-                        "text": "BLatest info goes here.",
-                        "link": ""
-                    },
-                    {
-                        "id": 4,
-                        "title": "ASome news 1",
-                        "text": "BLatest info goes here.",
+                        "title": "Coming Soon",
+                        "text": "Coming soon.",
                         "link": ""
                     }
                 ]
