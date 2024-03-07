@@ -34,6 +34,9 @@ const Theme = {
       },
     },
     colors: {
+      // gsg: "rgb(18, 147, 40)",
+      gsg: "rgb(8, 7, 4)",
+      // gsg: "rgb(30, 38, 207)",
       bg: "#f21158ff",
       primary: "#f21158ff",
       secondary: "#f21158ff",

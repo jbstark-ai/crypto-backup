@@ -1,14 +1,20 @@
 * {
   box-sizing: border-box;
 }
+html {
+  box-sizing: border-box;
+}
 body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  font-size: 16px;
-  font-family: "Monos", Arial, Helvetica, sans-serif;
-  margin: 0;
+  font-size: 18px;
 }
-
+h1, h2 {
+  line-height: 1.5;
+}
+a:link, a:visited, a:active {
+  text-decoration: none;
+}
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;

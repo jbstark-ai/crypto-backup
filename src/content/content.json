@@ -1,0 +1,133 @@
+{
+    "en": {
+        "socials": {
+            "title": "ASocials",
+            "data": [
+                {
+                    "id": 1,
+                    "network": "discord",
+                    "link": ""
+                },
+                {
+                    "id": 2,
+                    "network": "patreon",
+                    "link": ""
+                },
+                {
+                    "id": 3,
+                    "network": "youtube",
+                    "link": ""
+                },
+                {
+                    "id": 4,
+                    "network": "tiktok",
+                    "link": ""
+                },
+                {
+                    "id": 5,
+                    "network": "instagram",
+                    "link": ""
+                }
+            ]
+        },
+        "footer": {
+            "data": [
+                "&copy; 2024 Gemsword Games LTD"
+            ]
+        },
+        "home": {
+            "meta": {
+                "data": [
+                    "Gemsword Games | Independent Game Developer"
+                ]
+            },
+            "hero": {
+                "data": [
+                    {
+                        "id": 1,
+                        "title": "TitleOmg",
+                        "video": "https://s3.ap-northeast-2.wasabisys.com/gsg/medium_vid.mp4",
+                        "text": "AMy snappy description of the game adsasdasdasd",
+                        "link": "#",
+                        "linkText": "BLink text"
+                    }
+                ]
+            },
+            "feature": {
+                "data": [
+                    {
+                        "id": 1,
+                        "video": "https://s3.ap-northeast-2.wasabisys.com/gsg/medium_vid.mp4",
+                        "title": "ALet's join the adventure",
+                        "text": "AMy longer format description of the game adsasdasdasd bla asdjahad adk nczxc wkhaddad.",
+                        "link": "#"
+                    }
+                ]
+            },
+            "products": {
+                "title": "AGAMEs",
+                "text": "ASomebody come get 'er",
+                "data": [
+                    {
+                        "id": 1,
+                        "title": "BFoo bar woo ma",
+                        "caption": "RPG",
+                        "image": "https://i.redd.it/i1nduf93s38a1.jpg",
+                        "link": "#"
+                    },
+                    {
+                        "id": 2,
+                        "title": "BFoo bar woo ma",
+                        "caption": "RPG",
+                        "image": "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcSjR8ayNiqJk3pSeWjcLybaOX2sFY9ULW72xGQL1VtcBUhu1Myj",
+                        "link": "#"
+                    },
+                    {
+                        "id": 3,
+                        "title": "BFoo bar woo ma",
+                        "caption": "RPG",
+                        "image": "https://fs-prod-cdn.nintendo-europe.com/media/images/10_share_images/games_15/nintendo_switch_4/H2x1_NSwitch_SuperBombermanR_image1600w.jpg",
+                        "link": "#"
+                    },
+                    {
+                        "id": 4,
+                        "title": "BFoo bar woo ma",
+                        "caption": "RPG",
+                        "image": "https://fanatical.imgix.net/product/original/03f7fafd-d1ae-492a-81cb-57d7a071c2da.jpeg?auto=compress,format&w=870&fit=crop&h=489",
+                        "link": "#"
+                    }
+                ]
+            },
+            "news": {
+                "title": "Anews",
+                "text": "ALatest info goes here.",
+                "data": [
+                    {
+                        "id": 1,
+                        "title": "ASome news 1",
+                        "text": "BLatest info goes here.",
+                        "link": ""
+                    },
+                    {
+                        "id": 2,
+                        "title": "ASome news 1",
+                        "text": "BLatest info goes here.",
+                        "link": ""
+                    },
+                    {
+                        "id": 3,
+                        "title": "ASome news 1",
+                        "text": "BLatest info goes here.",
+                        "link": ""
+                    },
+                    {
+                        "id": 4,
+                        "title": "ASome news 1",
+                        "text": "BLatest info goes here.",
+                        "link": ""
+                    }
+                ]
+            }
+        }
+    }
+}

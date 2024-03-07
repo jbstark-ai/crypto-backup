@@ -30,14 +30,16 @@
       "@/*": ["/*"],
       "@/components": ["/components"],
       "@/components/*": ["/components/*"],
-      "@/stores": ["/stores"],
-      "@/stores/*": ["/stores/*"],
       "@/routes": ["/routes"],
       "@/routes/*": ["/routes/*"],
-      "@/views": ["/views"],
-      "@/views/*": ["/views/*"],
+      "@/stores": ["/stores"],
+      "@/stores/*": ["/stores/*"],
+      "@/styles": ["/styles"],
+      "@/styles/*": ["/styles/*"],
       "@/themes": ["/themes"],
-      "@/themes/*": ["/themes/*"]
+      "@/themes/*": ["/themes/*"],
+      "@/views": ["/views"],
+      "@/views/*": ["/views/*"]
     },
     "types": ["@testing-library/jest-dom"]
   },

@@ -1,10 +1,25 @@
 @font-face {
-    font-family: 'Cred';
-    src: local('Cred');
-    src: url('./fonts/cred/Cred-Regular.otf');
-  }
-  @font-face {
-    font-family: 'Monos';
-    src: local('Monos');
-    src: url('./fonts/monos/Monos-Regular.otf');
-  }
+  font-family: 'Monos';
+  src: local('Monos');
+  src: url('./fonts/font_monos/Monos.ttf');
+}
+@font-face {
+  font-family: 'Genniro';
+  src: local('Genniro');
+  src: url('./fonts/font_genniro/Genniro.ttf');
+}
+@font-face {
+  font-family: 'Galiwar';
+  src: local('Galiwar');
+  src: url('./fonts/font_galiwar/Galiwar.ttf');
+}
+@font-face {
+  font-family: 'Kasumi';
+  src: local('Kasumi');
+  src: url('./fonts/font_kasumi/KasumiRegular.otf');
+}
+@font-face {
+  font-family: 'Nos';
+  src: local('Nos');
+  src: url('./fonts/font_nos/Nos.ttf');
+}
