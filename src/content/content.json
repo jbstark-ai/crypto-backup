@@ -1,7 +1,7 @@
 {
     "en": {
         "socials": {
-            "title": "ASocials",
+            "title": "Join us on social media",
             "data": [
                 {
                     "id": 1,
@@ -32,7 +32,7 @@
         },
         "footer": {
             "data": [
-                "&copy; 2024 Gemsword Games LTD"
+                "© 2024 Gemsword Games LTD"
             ]
         },
         "home": {
@@ -45,11 +45,11 @@
                 "data": [
                     {
                         "id": 1,
-                        "title": "TitleOmg",
+                        "title": "Mystical Medic",
                         "video": "https://s3.ap-northeast-2.wasabisys.com/gsg/medium_vid.mp4",
-                        "text": "AMy snappy description of the game adsasdasdasd",
+                        "text": "Transform into a white blood cell and smash viruses to save lives.",
                         "link": "#",
-                        "linkText": "BLink text"
+                        "linkText": ""
                     }
                 ]
             },
@@ -58,49 +58,49 @@
                     {
                         "id": 1,
                         "video": "https://s3.ap-northeast-2.wasabisys.com/gsg/medium_vid.mp4",
-                        "title": "ALet's join the adventure",
-                        "text": "AMy longer format description of the game adsasdasdasd bla asdjahad adk nczxc wkhaddad.",
+                        "title": "Discover new adventures",
+                        "text": "Gem Sword Games is a new indie game developer for all platforms. \nWe are a fully remote studio.",
                         "link": "#"
                     }
                 ]
             },
             "products": {
-                "title": "AGAMEs",
-                "text": "ASomebody come get 'er",
+                "title": "Our Games",
+                "text": "",
                 "data": [
                     {
                         "id": 1,
-                        "title": "BFoo bar woo ma",
+                        "title": "Dragon Trigger",
                         "caption": "RPG",
                         "image": "https://i.redd.it/i1nduf93s38a1.jpg",
                         "link": "#"
                     },
                     {
                         "id": 2,
-                        "title": "BFoo bar woo ma",
-                        "caption": "RPG",
+                        "title": "Crisis Creatures",
+                        "caption": "Shooter",
                         "image": "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcSjR8ayNiqJk3pSeWjcLybaOX2sFY9ULW72xGQL1VtcBUhu1Myj",
                         "link": "#"
                     },
                     {
                         "id": 3,
-                        "title": "BFoo bar woo ma",
-                        "caption": "RPG",
+                        "title": "Evergreen Tactics",
+                        "caption": "Strategy",
                         "image": "https://fs-prod-cdn.nintendo-europe.com/media/images/10_share_images/games_15/nintendo_switch_4/H2x1_NSwitch_SuperBombermanR_image1600w.jpg",
                         "link": "#"
                     },
                     {
                         "id": 4,
-                        "title": "BFoo bar woo ma",
-                        "caption": "RPG",
+                        "title": "Hexblight",
+                        "caption": "Action",
                         "image": "https://fanatical.imgix.net/product/original/03f7fafd-d1ae-492a-81cb-57d7a071c2da.jpeg?auto=compress,format&w=870&fit=crop&h=489",
                         "link": "#"
                     }
                 ]
             },
             "news": {
-                "title": "Anews",
-                "text": "ALatest info goes here.",
+                "title": "Blog",
+                "text": "Latest news and updates.",
                 "data": [
                     {
                         "id": 1,

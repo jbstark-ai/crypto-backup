@@ -16,14 +16,14 @@ import payload from "../../content/content.json";
 // - Games
 // - Characters
 
-export const NewsCard = ({ title, link }) => {
+export const NewsCard = ({ title, link = "" }) => {
   return (
     // <Link to={link}>
     <Box py={4} flex={1} h="240px" minW="200px">
       <Box
         _hover={{
           transform: "translate(-8px, -8px)",
-          boxShadow: "16px 16px 0px red",
+          boxShadow: "16px 16px 0px crimson",
           cursor: "pointer",
           transition: "0.2s",
         }}
@@ -55,7 +55,7 @@ export const ProductGroup = ({ title, text, products }) => {
             cursor: "pointer",
             transition: "0.2s",
           }}
-          boxShadow={"6px 6px 0px red"}
+          boxShadow={"6px 6px 0px crimson"}
           bgImage={image}
           bgSize={"cover"}
           bgPosition="center"
@@ -108,7 +108,7 @@ const HeroUnit = ({ video, title, caption, link = "", linkText = "Go ->" }) => {
         transform={"translateY(-10%)"}
       >
         <video
-          title="naruto"
+          title={title}
           src={video}
           autoPlay={true}
           muted={true}
@@ -118,8 +118,8 @@ const HeroUnit = ({ video, title, caption, link = "", linkText = "Go ->" }) => {
         />
       </AspectRatio>
       <Box
-        bg={"white"}
-        color="black"
+        bg={"black"}
+        color="white"
         py={5}
         px={16}
         pr={20}
