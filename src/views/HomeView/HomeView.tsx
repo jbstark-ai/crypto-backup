@@ -93,48 +93,55 @@ export const ProductGroup = ({ title, text, products }) => {
 
 const HeroUnit = ({ video, title, caption, link = "", linkText = "Go ->" }) => {
   return (
-    <Box
-      bg="none"
-      height="620px"
-      display="flex"
-      flexDirection={"column"}
-      alignContent={"flex-end"}
-      flexShrink={1}
-      position="relative"
-      overflow="hidden"
-    >
-      <AspectRatio
-        ratio={{ sm: 9 / 16, md: 4 / 3, lg: 16 / 9 }}
-        transform={"translateY(-10%)"}
-      >
-        <video
-          title={title}
-          src={video}
-          autoPlay={true}
-          muted={true}
-          width={"100%"}
-          height={"100%"}
-          loop={true}
-        />
-      </AspectRatio>
+    <>
       <Box
-        bg={"black"}
-        color="white"
-        py={5}
-        px={16}
-        pr={20}
-        display={"inline-block"}
-        position="absolute"
+        bg="none"
+        height="620px"
+        display="flex"
+        flexDirection={"column"}
+        alignContent={"flex-end"}
         flexShrink={1}
-        top={"10%"}
+        position="relative"
+        overflow="hidden"
       >
-        <Heading as="h2" mb={3}>
-          {title}
-        </Heading>
-        <Text maxW={"40ch"}>{caption}</Text>
-        <Link to={link}>{linkText}</Link>
+        <AspectRatio
+          ratio={{ sm: 9 / 12, md: 16 / 9 }}
+          transform={"translateY(-10%)"}
+        >
+          <iframe
+            src={video}
+            title={title}
+            allow="accelerometer; loop; autoplay; encrypted-media; gyroscope;"
+          ></iframe>
+        </AspectRatio>
+        <Box
+          zIndex={3}
+          bg={"black"}
+          color="white"
+          py={5}
+          px={16}
+          pr={20}
+          display={"inline-block"}
+          position="absolute"
+          flexShrink={1}
+          top={"10%"}
+        >
+          <Heading as="h2" mb={3}>
+            {title}
+          </Heading>
+          <Text maxW={"40ch"}>{caption}</Text>
+          <Link to={link}>{linkText}</Link>
+        </Box>
       </Box>
-    </Box>
+      <Box
+        zIndex={2}
+        w="100%"
+        h="620"
+        display={"inline"}
+        position="absolute"
+        bg="rgb(0,0,255,0)"
+      ></Box>
+    </>
   );
 };
 
@@ -163,7 +170,12 @@ const VideoUnit = ({ video, title, text }) => {
             ratio={{ sm: 12 / 9, lg: 16 / 9 }}
             transform={"translateY(-10%)"}
           >
-            <video
+            <iframe
+              src={video}
+              title={title}
+              allow="accelerometer; loop; autoplay; encrypted-media; gyroscope;"
+            ></iframe>
+            {/* <video
               title="naruto"
               src={video}
               autoPlay={true}
@@ -171,7 +183,7 @@ const VideoUnit = ({ video, title, text }) => {
               width={"100%"}
               height={"100%"}
               loop={true}
-            />
+            /> */}
           </AspectRatio>
         </Box>
         <Box px={8} flexShrink={1} pt={3} position="relative">
