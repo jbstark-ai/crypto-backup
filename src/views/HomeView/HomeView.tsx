@@ -1,11 +1,16 @@
-import styled from "styled-components";
 // import { usePageContentStore } from "../../stores";
-import { Page } from "../../components/Page";
-import { Link } from "react-router-dom";
-import { Box, Flex, AspectRatio, Heading, SimpleGrid } from "@chakra-ui/react";
-import { Text } from "@chakra-ui/react";
-import Theme from "../../themes/theme";
+import { useState } from "react";
+
+import { Footer } from "@/components/Footer";
+import { SimpleGrid } from "@chakra-ui/react";
+import { Feature } from "@/components/Feature";
+import { SocialNetworkGroup } from "@/components/SocialNetworkGroup";
+import { Hero } from "@/components/Hero";
+import { Page } from "@/components/Page";
+// import { NewsGroup } from "@/components/NewsGroup";
+
 import payload from "../../content/content.json";
+import { ProductGroup } from "@/components/ProductGroup";
 
 // Gem Sword Games
 //
@@ -16,296 +21,52 @@ import payload from "../../content/content.json";
 // - Games
 // - Characters
 
-export const NewsCard = ({ title, link = "" }) => {
-  return (
-    // <Link to={link}>
-    <Box py={4} flex={1} h="240px" minW="200px">
-      <Box
-        _hover={{
-          transform: "translate(-8px, -8px)",
-          boxShadow: "16px 16px 0px crimson",
-          cursor: "pointer",
-          transition: "0.2s",
-        }}
-        boxShadow={"6px 6px 0px white"}
-        bg="grey"
-        flex={1}
-        w="100%"
-        h="100%"
-      ></Box>
-      <Box>
-        <Text color="white" py={3} px={2}>
-          {title}
-        </Text>
-      </Box>
-    </Box>
-    // </Link>
-  );
+const getCurrentTimeAsInt = (): number => {
+  let dateString: string = new Date().toISOString();
+  dateString = dateString.split("T")[1];
+  dateString = dateString.split(".")[0];
+  dateString = dateString.replace(/:/g, "");
+  dateString = dateString.slice(0, 4);
+  return Number(dateString);
 };
-export const ProductGroup = ({ title, text, products }) => {
-  const ProductCard = ({ id, caption, image, title }) => {
-    return (
-      <Box key={id} cursor={"pointer"}>
-        <Box
-          bg="grey"
-          h="240px"
-          _hover={{
-            transform: "translate(-8px, -8px)",
-            boxShadow: "16px 16px 0px black",
-            cursor: "pointer",
-            transition: "0.2s",
-          }}
-          boxShadow={"6px 6px 0px crimson"}
-          bgImage={image}
-          bgSize={"cover"}
-          bgPosition="center"
-        ></Box>
-        <Text px={3} pt={3} fontWeight={"bold"}>
-          {title}
-        </Text>
-        <Text px={3} pb={3} color={Theme.default.colors.secondary}>
-          {caption}
-        </Text>
-      </Box>
-    );
+const isLiveNow = (
+  streamStart24HrUTC: number,
+  streamEnd24HrUTC: number
+): boolean => {
+  const dateInt: number = getCurrentTimeAsInt();
+  console.log(dateInt, streamStart24HrUTC, streamEnd24HrUTC);
+  return dateInt > streamStart24HrUTC && dateInt < streamEnd24HrUTC;
+};
+
+export const HomeView = () => {
+  const stream = {
+    start: 2100,
+    end: 2300,
   };
-  return (
-    <Box p={6} pb={32} bg="whitesmoke" color="black">
-      <Heading as="h2" lineHeight={2} textAlign={"center"}>
-        {title}
-      </Heading>
-      <Text pb={10} textAlign={"center"}>
-        {text}
-      </Text>
-      <SimpleGrid columns={{ md: 4, sm: 2 }} spacing={5}>
-        {products.map((product) => (
-          <ProductCard
-            id={product.id}
-            caption={product.caption}
-            image={product.image}
-            title={product.title}
-          />
-        ))}
-      </SimpleGrid>
-    </Box>
-  );
-};
-
-const HeroUnit = ({ video, title, caption, link = "", linkText = "Go ->" }) => {
-  return (
-    <>
-      <Box
-        bg="none"
-        height="620px"
-        display="flex"
-        flexDirection={"column"}
-        alignContent={"flex-end"}
-        flexShrink={1}
-        position="relative"
-        overflow="hidden"
-      >
-        <AspectRatio
-          ratio={{ sm: 9 / 12, md: 16 / 9 }}
-          transform={"translateY(-10%)"}
-        >
-          <iframe
-            src={video}
-            title={title}
-            allow="accelerometer; loop; autoplay; encrypted-media; gyroscope;"
-          ></iframe>
-        </AspectRatio>
-        <Box
-          zIndex={3}
-          bg={"black"}
-          color="white"
-          py={5}
-          px={16}
-          pr={20}
-          display={"inline-block"}
-          position="absolute"
-          flexShrink={1}
-          top={"10%"}
-        >
-          <Heading as="h2" mb={3}>
-            {title}
-          </Heading>
-          <Text maxW={"40ch"}>{caption}</Text>
-          <Link to={link}>{linkText}</Link>
-        </Box>
-      </Box>
-      <Box
-        zIndex={2}
-        w="100%"
-        h="620"
-        display={"inline"}
-        position="absolute"
-        bg="rgb(0,0,255,0)"
-      ></Box>
-    </>
-  );
-};
-
-const VideoUnit = ({ video, title, text }) => {
-  return (
-    <Box
-      bg="whitesmoke"
-      display={"flex"}
-      justifyContent="space-evenly"
-      color="black"
-      px={5}
-      pt={20}
-    >
-      <SimpleGrid maxW={"1280px"} columns={{ md: 2, sm: 1 }}>
-        <Box
-          p={8}
-          bg="none"
-          borderRadius={"24px"}
-          h="360px"
-          w="100%"
-          overflow={"hidden"}
-        >
-          <AspectRatio
-            borderRadius={"24px"}
-            overflow={"hidden"}
-            ratio={{ sm: 12 / 9, lg: 16 / 9 }}
-            transform={"translateY(-10%)"}
-          >
-            <img src={video} alt={title} />
-            {/* <iframe
-              src={video}
-              title={title}
-              allow="accelerometer; loop; autoplay; encrypted-media; gyroscope;"
-            ></iframe> */}
-            {/* <video
-              title="naruto"
-              src={video}
-              autoPlay={true}
-              muted={true}
-              width={"100%"}
-              height={"100%"}
-              loop={true}
-            /> */}
-          </AspectRatio>
-        </Box>
-        <Box px={8} flexShrink={1} pt={3} position="relative">
-          <Heading as="h2">{title}</Heading>
-          <Text pt={16} maxW={"48ch"}>
-            {text}
-          </Text>
-        </Box>
-      </SimpleGrid>
-    </Box>
-  );
-};
-
-export const NewsGroup = ({ title, text, posts }) => {
-  return (
-    <Box p={16} bg={Theme.default.colors.gsg} color="white" py={32}>
-      <Heading as="h2">{title}</Heading>
-      <Text pb={12}>{text}</Text>
-      <Flex gap={5} wrap={"wrap"} justifyContent={"space-evenly"}>
-        {posts.map((post) => (
-          <NewsCard key={post.id} title={post.title} link={post.link} />
-        ))}
-      </Flex>
-    </Box>
-  );
-};
-
-import {
-  RiDiscordFill,
-  RiInstagramFill,
-  RiPatreonFill,
-  RiTiktokFill,
-  RiYoutubeFill,
-} from "react-icons/ri";
-export const SocialGroup = ({ title, networks }) => {
-  const getSocialIcon = (network): JSX.Element => {
-    switch (network) {
-      case "patreon":
-        return <RiPatreonFill size={"10rem"} />;
-      case "instagram":
-        return <RiInstagramFill size={"10rem"} />;
-      case "tiktok":
-        return <RiTiktokFill size={"10rem"} />;
-      case "youtube":
-        return <RiYoutubeFill size={"10rem"} />;
-      case "discord":
-        return <RiDiscordFill size={"10rem"} />;
-      default:
-        return <></>;
-    }
-  };
-  return (
-    <Box bg="whitesmoke" py={32}>
-      <Box>
-        <Heading as="h2" textAlign={"center"}>
-          {title}
-        </Heading>
-        <Flex wrap="wrap" gap={5} justifyContent={"space-evenly"} p={16}>
-          {networks.map((network) => (
-            <Link to={network.link}>
-              <Box
-                _hover={{
-                  color: "crimson",
-                }}
-                bg="none"
-                display="flex"
-                alignItems={"center"}
-                justifyContent={"center"}
-                minW={"220px"}
-                maxW={"280px"}
-                flex={1}
-                h="240px"
-              >
-                {getSocialIcon(network.network)}
-              </Box>
-              <Text textAlign={"center"}>{network.network}</Text>
-            </Link>
-          ))}
-        </Flex>
-      </Box>
-    </Box>
-  );
-};
-
-export const Footer = ({ text }) => {
-  return (
-    <Box py={8}>
-      <Text textAlign="center" color="black">
-        {text}
-      </Text>
-    </Box>
-  );
-};
-
-export const HomeView = (props) => {
+  const [_live] = useState(isLiveNow(stream.start, stream.end));
   return (
     <Page>
       <SimpleGrid columns={1} spacing={0}>
-        <HeroUnit
+        <Hero
           title={payload.en.home.hero.data[0].title}
           caption={payload.en.home.hero.data[0].text}
           video={payload.en.home.hero.data[0].video}
           link={payload.en.home.hero.data[0].link}
           linkText={payload.en.home.hero.data[0].linkText}
         />
-        <VideoUnit
-          video={payload.en.home.feature.data[0].video}
-          title={payload.en.home.feature.data[0].title}
-          text={payload.en.home.feature.data[0].text}
-        />
+        <Feature.MediaGroup media={payload.en.home.feature.data} live={_live} />
         <ProductGroup
           title={payload.en.home.products.title}
           text={payload.en.home.products.text}
           products={payload.en.home.products.data}
         />
-        <NewsGroup
+        {_live}
+        {/* <NewsGroup
           title={payload.en.home.news.title}
           text={payload.en.home.news.text}
           posts={payload.en.home.news.data}
-        />
-        <SocialGroup
+        /> */}
+        <SocialNetworkGroup
           title={payload.en.socials.title}
           networks={payload.en.socials.data}
         />

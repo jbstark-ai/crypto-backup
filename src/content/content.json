@@ -5,34 +5,34 @@
             "data": [
                 {
                     "id": 1,
-                    "network": "discord",
-                    "link": ""
+                    "network": "patreon",
+                    "link": "https://patreon.com/gemswordgames"
                 },
                 {
                     "id": 2,
-                    "network": "patreon",
-                    "link": ""
+                    "network": "discord",
+                    "link": "https://discord.gg/Bfq6wTQ8cc"
                 },
                 {
                     "id": 3,
-                    "network": "youtube",
-                    "link": ""
+                    "network": "twitch",
+                    "link": "https://twitch.tv/gemswordgames"
                 },
                 {
                     "id": 4,
                     "network": "tiktok",
-                    "link": ""
+                    "link": "https://tiktok.com/gemswordgames"
                 },
                 {
                     "id": 5,
                     "network": "instagram",
-                    "link": ""
+                    "link": "https://instagram.com/gemswordgames"
                 }
             ]
         },
         "footer": {
             "data": [
-                "© 2024 Gemsword Games LTD"
+                "© 2024 Gemsword Games"
             ]
         },
         "home": {
@@ -45,9 +45,11 @@
                 "data": [
                     {
                         "id": 1,
-                        "title": "Mystical Medic",
-                        "video": "https://www.youtube.com/embed/FAyKDaXEAgc?si=Kn2s9_gfJLTpeAws&autoplay=1&list=PLS17HQ3x1Bv1PjSo5BvR2SFNIUta9nZ7f&controls=0&mute=1&loop=1&rel=0&showinfo=0",
-                        "text": "Become a white blood cell and slam infections to save lives.",
+                        "title": "Project DT",
+                        "video": "/banner.jpg",
+                        "text": "Experience an adventure like no other.",
+                        "video.old": "https://www.youtube.com/embed/FAyKDaXEAgc?si=Kn2s9_gfJLTpeAws&autoplay=1&list=PLS17HQ3x1Bv1PjSo5BvR2SFNIUta9nZ7f&controls=0&mute=1&loop=1&rel=0&showinfo=0",
+                        "text.old": "Become a white blood cell and slam infections to save lives.",
                         "link": "#",
                         "linkText": ""
                     }
@@ -56,12 +58,27 @@
             "feature": {
                 "data": [
                     {
+                        "id": 2,
+                        "media": "https://upload.wikimedia.org/wikipedia/commons/3/3f/Twitch_Logo.jpg",
+                        "title": "Watch Live on Twitch",
+                        "text": [
+                            "We're making our debut indie game Mystical Medic games LIVE on Twitch, Tuesdays and Sundays 1pm PST / 4pm EST / 9pm GMT.",
+                            "Join us for two ours of indie game development, casual chat and Q&A."
+                        ],
+                        "link": "https://twitch.tv/gemswordgames",
+                        "linkText": "Follow us on Twitch"
+                    },
+                    {
                         "id": 1,
-                        "video": "https://image.api.playstation.com/vulcan/img/rnd/202009/2822/mYMuwpPA3kPgWoCWzvaVytSI.png",
-                        "videoOld": "https://www.youtube-nocookie.com/embed/dEk_4wbVhJ4?si=t4hv2hXeASkEZsq9&autoplay=1&controls=0&mute=1&loop=1&rel=0&showinfo=0",
-                        "title": "Fresh games incoming",
-                        "text": "Gem Sword Games is a new indie game developer for all platforms. \nWe are a fully remote studio.",
-                        "link": "#"
+                        "full": true,
+                        "media": "/rd_icon.png",
+                        "title": "Our purpose",
+                        "text": [
+                            "Gem Sword Games is a new indie game developer for all platforms.",
+                            "Our objective is to make funky, fresh games that you can enjoy alone or with friends."
+                        ],
+                        "link": "",
+                        "linkText": ""
                     }
                 ]
             },
@@ -71,30 +88,10 @@
                 "data": [
                     {
                         "id": 1,
-                        "title": "Dragon Trigger",
-                        "caption": "RPG",
-                        "image": "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcSWnWNS-Ym3wzEcNb1zkUuloQZqEeP9xi4pTfTA-BHoJkuH8frW",
-                        "link": "#"
-                    },
-                    {
-                        "id": 2,
-                        "title": "Crisis Creatures",
-                        "caption": "Shooter",
-                        "image": "https://www.gameinformer.com/sites/default/files/styles/full/public/2024/01/22/518c662a/palworld_1.jpg",
-                        "link": "#"
-                    },
-                    {
-                        "id": 3,
-                        "title": "Evergreen Tactics",
-                        "caption": "Strategy",
-                        "image": "https://pbs.twimg.com/media/Euhv3fjXAAA7xS-.jpg",
-                        "link": "#"
-                    },
-                    {
-                        "id": 4,
-                        "title": "Hexblight",
-                        "caption": "Action",
-                        "image": "https://cdna.artstation.com/p/assets/images/images/041/435/210/large/johan-wahlback-vrisingkeyart.jpg?1631699761",
+                        "title": "Mystical Medic",
+                        "caption": "Action, Coming Soon",
+                        "image.old": "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcSWnWNS-Ym3wzEcNb1zkUuloQZqEeP9xi4pTfTA-BHoJkuH8frW",
+                        "image": "/rd_spin2.png",
                         "link": "#"
                     }
                 ]

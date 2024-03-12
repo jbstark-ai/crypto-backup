@@ -1,9 +1,11 @@
-import React from "react";
-import styled from "styled-components";
+import { Box, Text } from "@chakra-ui/react";
 
-const Wrapper = styled.div`
-  border: thick solid red;
-`;
-export const Footer = (props) => {
-  return <Wrapper>{props.children}</Wrapper>;
+export const Footer = ({ text }) => {
+  return (
+    <Box py={8}>
+      <Text textAlign="center" color="black">
+        {text}
+      </Text>
+    </Box>
+  );
 };
