@@ -58,27 +58,26 @@
             "feature": {
                 "data": [
                     {
-                        "id": 2,
-                        "media": "https://upload.wikimedia.org/wikipedia/commons/3/3f/Twitch_Logo.jpg",
-                        "title": "Watch Live on Twitch",
-                        "text": [
-                            "We're making our debut indie game Mystical Medic games LIVE on Twitch, Tuesdays and Sundays 1pm PST / 4pm EST / 9pm GMT.",
-                            "Join us for two ours of indie game development, casual chat and Q&A."
-                        ],
-                        "link": "https://twitch.tv/gemswordgames",
-                        "linkText": "Follow us on Twitch"
-                    },
-                    {
                         "id": 1,
                         "full": true,
                         "media": "/rd_icon.png",
-                        "title": "Our purpose",
+                        "title": "Gem Sword Games",
                         "text": [
-                            "Gem Sword Games is a new indie game developer for all platforms.",
+                            "We are a new indie game developer for all platforms.",
                             "Our objective is to make funky, fresh games that you can enjoy alone or with friends."
                         ],
                         "link": "",
                         "linkText": ""
+                    },
+                    {
+                        "id": 2,
+                        "media": "https://upload.wikimedia.org/wikipedia/commons/3/3f/Twitch_Logo.jpg",
+                        "title": "Watch Live on Twitch",
+                        "text": [
+                            "Watch us make our first game 'Mystical Medic', LIVE on Twitch Tuesdays and Sundays 1pm PST / 4pm EST / 9pm GMT."
+                        ],
+                        "link": "https://twitch.tv/gemswordgames",
+                        "linkText": "Follow us on Twitch"
                     }
                 ]
             },

@@ -6,6 +6,7 @@ import {
   AspectRatio,
   Heading,
   Button,
+  Grid,
 } from "@chakra-ui/react";
 import { useNavigate } from "react-router-dom";
 
@@ -39,7 +40,7 @@ const MediaUnit = ({ id, full, media, title, text, live, link, linkText }) => {
       justifyContent="space-evenly"
       color="black"
       px={5}
-      pt={32}
+      // pt={32}
       pb={10}
     >
       <SimpleGrid maxW={"1280px"} columns={{ md: 2, sm: 1 }}>
@@ -71,7 +72,7 @@ const MediaUnit = ({ id, full, media, title, text, live, link, linkText }) => {
         <Box
           order={{ sm: 0, md: id % 2 === 0 ? 1 : 0 }}
           px={8}
-          pt={3}
+          pt={0}
           alignContent={"center"}
           position="relative"
         >
@@ -106,7 +107,7 @@ const MediaUnit = ({ id, full, media, title, text, live, link, linkText }) => {
 
 export const MediaGroup = ({ media, live }) => {
   return (
-    <>
+    <SimpleGrid columns={1} pt={{ sm: 8, md: 24 }} bg={"whitesmoke"}>
       {media.map((mediaItem) => (
         <>
           <MediaUnit
@@ -123,7 +124,7 @@ export const MediaGroup = ({ media, live }) => {
           />
         </>
       ))}
-    </>
+    </SimpleGrid>
   );
 };
 
