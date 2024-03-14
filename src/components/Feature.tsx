@@ -55,18 +55,18 @@ const MediaUnit = ({ id, full, media, title, text, live, link, linkText }) => {
           w="100%"
           overflow={"hidden"}
         >
-          {/* {full ? (
+          {full ? (
             <></>
           ) : (
             <AspectRatio
               borderRadius={"24px"}
               overflow={"hidden"}
-              ratio={{ sm: 12 / 9, lg: 16 / 9 }}
+              ratio={16 / 9}
               transform={"translateY(-10%)"}
             >
               <img src={media} alt={title} />
             </AspectRatio>
-          )} */}
+          )}
         </Box>
         <Box
           order={{ sm: 0, md: id % 2 === 0 ? 1 : 0 }}
