@@ -71,6 +71,7 @@
                     },
                     {
                         "id": 2,
+                        "full": true,
                         "media": "https://upload.wikimedia.org/wikipedia/commons/3/3f/Twitch_Logo.jpg",
                         "title": "Watch Live on Twitch",
                         "text": [

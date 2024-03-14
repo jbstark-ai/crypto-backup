@@ -107,7 +107,7 @@ const MediaUnit = ({ id, full, media, title, text, live, link, linkText }) => {
 
 export const MediaGroup = ({ media, live }) => {
   return (
-    <SimpleGrid columns={1} pt={{ sm: 8, md: 24 }} bg={"whitesmoke"}>
+    <SimpleGrid columns={1} py={{ sm: 8, md: 24 }} bg={"whitesmoke"}>
       {media.map((mediaItem) => (
         <>
           <MediaUnit
