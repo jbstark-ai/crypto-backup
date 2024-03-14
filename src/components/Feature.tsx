@@ -44,7 +44,7 @@ const MediaUnit = ({ id, full, media, title, text, live, link, linkText }) => {
     >
       <SimpleGrid maxW={"1280px"} columns={{ md: 2, sm: 1 }}>
         <Box
-          order={id % 2 === 0 ? 0 : 1}
+          order={{ sm: 1, md: id % 2 === 0 ? 0 : 1 }}
           p={8}
           bg={full ? `url(${media})` : "none"}
           bgSize="contain"
@@ -69,7 +69,7 @@ const MediaUnit = ({ id, full, media, title, text, live, link, linkText }) => {
           )}
         </Box>
         <Box
-          order={id % 2 === 0 ? 1 : 0}
+          order={{ sm: 0, md: id % 2 === 0 ? 1 : 0 }}
           px={8}
           pt={3}
           alignContent={"center"}
