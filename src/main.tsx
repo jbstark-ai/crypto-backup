@@ -1,4 +1,5 @@
 import React from "react";
+import { Web3ModalProvider } from "./providers/Web3ModalProvider";
 import ReactDOM from "react-dom/client";
 import { ChakraProvider } from "@chakra-ui/react";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
@@ -21,8 +22,10 @@ export default theme;
 
 root.render(
   <React.StrictMode>
-    <ChakraProvider theme={theme}>
-      <RouterProvider router={router} />
-    </ChakraProvider>
+    <Web3ModalProvider>
+      <ChakraProvider theme={theme}>
+        <RouterProvider router={router} />
+      </ChakraProvider>
+    </Web3ModalProvider>
   </React.StrictMode>
 );

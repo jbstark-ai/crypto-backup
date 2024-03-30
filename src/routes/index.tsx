@@ -1,3 +1,4 @@
+import { FormView } from "@/views/FormView/FormView";
 import {
   AccountView,
   ArticleView,
@@ -22,6 +23,10 @@ export const routes = [
   {
     path: "/",
     element: <HomeView />,
+  },
+  {
+    path: "/debug-forms",
+    element: <FormView />,
   },
   {
     path: "/account",

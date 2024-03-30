@@ -6,6 +6,10 @@ import styled from "styled-components";
 
 const Wrapper = styled.div`
   width: 100%;
+  margin: 0 auto;
+  border: 1px solid red;
+  padding-top: 4rem;
+  max-width: 1140px;
 `;
 type PageProps = {
   metadata?: {
@@ -21,12 +25,8 @@ export const Page = ({ metadata, children }: PageProps): JSX.Element => {
         <title>{metadata?.title}</title>
         <meta name="description" content={metadata?.description} />
       </Helmet>
-      <Wrapper>
-        <section>
-          <MainNav />
-        </section>
-        {children}
-      </Wrapper>
+      <MainNav />
+      <Wrapper>{children}</Wrapper>
     </>
   );
 };
